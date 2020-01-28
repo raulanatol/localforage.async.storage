@@ -1,0 +1,72 @@
+{
+  "name": "localforage.async.storage",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulanatol/localForage-async-storage"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "raulanatol",
+    "email": "raul@natol.es"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && webpack --mode production",
+    "clean": "shx rm -rf dist .dts"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|jpg|png|svg)$": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/after.ts"
+    ],
+    "snapshotSerializers": [
+      "jest-emotion"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "old"
+    ],
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  },
+  "devDependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.11.0",
+    "dts-bundle": "^0.7.3",
+    "localforage": "^1.7.3",
+    "shx": "^0.3.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.0.3",
+    "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "peerdependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
+    "localforage": "^1.7.3"
+  }
+}
